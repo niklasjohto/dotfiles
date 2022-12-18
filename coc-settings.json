@@ -1,0 +1,16 @@
+{
+  "languageserver": {
+    "lua": {
+      "command": "~/.local/share/nvim/lua-language-server/bin/lua-language-server",
+      "rootPatterns": [".git"],
+      "filetypes": ["lua"],
+      "settings": {
+        "Lua": {
+          "diagnostics": {
+            "globals": ["vim"]
+          }
+        }
+      }
+    }
+  }
+}
