@@ -4,6 +4,7 @@ require("mappings")
 require("colorscheme")
 
 -- Plugins
+require("plugins.gitsigns")
 require("plugins.indent-blankline")
 require("plugins.leap")
 require("plugins.lualine")

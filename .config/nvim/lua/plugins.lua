@@ -51,6 +51,11 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- git
+  use "lewis6991/gitsigns.nvim"
+  use "sindrets/diffview.nvim"
+  use "tpope/vim-fugitive"
+
   if packer_bootstrap then
     require("packer").sync()
   end
