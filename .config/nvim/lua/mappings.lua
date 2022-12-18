@@ -6,7 +6,7 @@ local map = function(mode, key, action, opts)
   vim.api.nvim_set_keymap(mode, key, action, option)
 end
 
-vim.g.mapleader = "<space>"
+vim.g.mapleader = " "
 
 -- Built in mappings
 map("n", "<CR>", ":noh<CR>")
@@ -21,12 +21,14 @@ map("i", "<A-j>", ":m .+<CR>")
 map("v", "<A-j>", ":m .+<CR>")
 
 -- Plugin mappings
-map("n", "<C-j>", ":NvimTreeToggle<CR>")
-map("n", "<C-k>", ":Telescope find_files<CR>")
+map("n", "<Leader>j", ":NvimTreeToggle<CR>")
+map("n", "<Leader>k", ":Telescope find_files<CR>")
 map("n", "gd", "<Plug>(coc-definition)")
 map("n", "gy", "<Plug>(coc-type-definition)")
 map("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<CR>'", { expr = true })
 map("n", "<Tab>", ":lua Show_documentation() <CR>")
+map("n", "<Leader>gj", ":DiffviewOpen <CR>")
+map("n", "<Leader>gk", ":DiffviewClose <CR>")
 
 Show_documentation = function()
   local filetype = vim.bo.filetype
