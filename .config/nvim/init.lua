@@ -2,6 +2,7 @@ require("options")
 require("plugins")
 require("mappings")
 require("colorscheme")
+require("autocmd")
 
 -- Plugins
 require("plugins.gitsigns")
